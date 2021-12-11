@@ -4,8 +4,15 @@ import SearchStatus from './components/searchStatus';
 import api from './api'
 
 function App() {
-    const [users, setUsers] = useState(api.users.fetchAll())
 
+    const dataFromAPI = api.users.fetchAll()
+    dataFromAPI.map(user => user.bookmark = false)
+
+    /*console.log('dataFromAPI', dataFromAPI)*/
+
+    const [users, setUsers] = useState(dataFromAPI)
+
+    
     /*console.log(users)*/
 
     const handleDelete = (userId) => {
@@ -15,7 +22,14 @@ function App() {
     }
 
     const handleToggleBookMark = (id) => {
-        console.log('press', id)
+        setUsers(prevState => prevState.map(user => {
+              if (user._id === id) {
+                user.bookmark = !user.bookmark
+                console.log('user.bookmark', user.bookmark)
+              }
+              return user
+            })
+        )
     }
 
     return(

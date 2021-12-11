@@ -1,11 +1,15 @@
 import React from "react"
 
-const BookMark = ({onClick, status}) => {
-    console.log('here', onClick)
-
-
+const BookMark = ({onClick, bookmark}) => {
+    
     /*<i class="bi bi-bookmark-fill"></i>*/
-    return <button><i className="bi bi-bookmark"></i></button>
+
+    if (bookmark){
+        /*console.log('true', bookmark)*/
+        return <button onClick={onClick}><i className="bi bi-bookmark-fill"></i></button>
+    }
+    /*console.log('false', bookmark)*/
+    return <button onClick={onClick}><i className="bi bi-bookmark"></i></button>
 }
 
 export default BookMark

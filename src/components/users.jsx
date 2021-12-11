@@ -19,7 +19,7 @@ const Users = ({users, onDelete, onChange}) => {
             </thead>
             <tbody>
                 {users.map(user => (
-                    <User /*{...rest}*/ user = {user} onDelete={onDelete} onChange = {onChange}/>
+                    <User user = {user} onDelete={onDelete} onChange = {onChange}/>
                 ))}
             </tbody>
         </table>

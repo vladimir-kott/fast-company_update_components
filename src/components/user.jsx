@@ -5,7 +5,6 @@ import BookMark from "./bookmark"
 const User = ({
 user,
 onDelete,
-bookmark,
 onChange
 }) => {
     /*console.log(user)*/
@@ -23,7 +22,7 @@ onChange
             <td>{user.rate}/5</td>
             <td>
                 <BookMark
-                status={bookmark}
+                bookmark={user.bookmark}
                 onClick = {() => onChange(user._id)}
                 />
             </td>
