@@ -3,6 +3,7 @@ import React from "react"
 const BookMark = ({onClick, bookmark}) => {
     
     /*<i class="bi bi-bookmark-fill"></i>*/
+    console.log('true dfgdfg ', bookmark)
 
     if (bookmark){
         /*console.log('true', bookmark)*/
