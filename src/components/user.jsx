@@ -7,8 +7,6 @@ user,
 onDelete,
 onChange
 }) => {
-    /*console.log(user)*/
-    /*console.log('hire', onDelete)*/
     return (
          <tr key = {user._id}>
             <td>{user.name}</td>

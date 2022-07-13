@@ -8,12 +8,7 @@ function App() {
     const dataFromAPI = api.users.fetchAll()
     dataFromAPI.map(user => user.bookmark = false)
 
-    /*console.log('dataFromAPI', dataFromAPI)*/
-
     const [users, setUsers] = useState(dataFromAPI)
-
-    
-    /*console.log(users)*/
 
     const handleDelete = (userId) => {
         setUsers(prevState=>prevState.filter((user) => {

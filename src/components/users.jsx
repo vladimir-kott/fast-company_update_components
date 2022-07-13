@@ -1,5 +1,5 @@
 import React from "react"
-import User from "./user"/*{users, ...rest}*/ 
+import User from "./user"
 
 const Users = ({users, onDelete, onChange}) => {
     return (
